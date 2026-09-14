@@ -1,0 +1,686 @@
+/* =========================================================
+   OPEN SOURCE SECTION
+   ONE CARD BELOW ANOTHER
+   FULL WIDTH
+   ========================================================= */
+
+.opensource-section {
+  width: 100% !important;
+  min-height: 100vh !important;
+
+  padding: 100px 0 120px !important;
+
+  position: relative !important;
+  overflow: hidden !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   SECTION CONTAINER
+   ========================================================= */
+
+.opensource-section .section-container {
+  width: 100% !important;
+  max-width: 1500px !important;
+
+  margin: 0 auto !important;
+
+  padding: 0 50px !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.opensource-section .section-heading {
+  width: 100% !important;
+
+  max-width: 900px !important;
+
+  margin: 0 auto 60px !important;
+
+  text-align: center !important;
+
+  box-sizing: border-box !important;
+}
+
+.opensource-section .section-eyebrow {
+  display: inline-block !important;
+
+  margin-bottom: 15px !important;
+
+  color: #91a3ff !important;
+
+  font-size: 0.78rem !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: 0.2em !important;
+}
+
+.opensource-section .section-heading h2 {
+  margin: 0 !important;
+
+  font-size: clamp(2.5rem, 4vw, 4rem) !important;
+
+  line-height: 1.1 !important;
+
+  font-weight: 800 !important;
+}
+
+.opensource-section .section-heading h2 span {
+  display: inline !important;
+
+  opacity: 0.65 !important;
+}
+
+.opensource-section .section-heading p {
+  width: 100% !important;
+
+  max-width: 800px !important;
+
+  margin: 22px auto 0 !important;
+
+  color: #9caecc !important;
+
+  font-size: 1.05rem !important;
+
+  line-height: 1.8 !important;
+}
+
+
+/* =========================================================
+   🔥 MAIN GRID
+   FORCE ONE COLUMN
+   ========================================================= */
+
+.opensource-section .opensource-grid {
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  /* KILL GRID */
+  display: flex !important;
+
+  /* ONE ABOVE ANOTHER */
+  flex-direction: column !important;
+
+  /* FULL WIDTH */
+  align-items: stretch !important;
+
+  justify-content: flex-start !important;
+
+  gap: 30px !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   🔥 EVERY CARD
+   FULL WIDTH + SAME HEIGHT
+   ========================================================= */
+
+.opensource-section .opensource-card {
+  /* FULL WIDTH */
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  min-width: 100% !important;
+
+  flex: 0 0 560px !important;
+
+  /* SAME HEIGHT */
+  height: 560px !important;
+
+  min-height: 560px !important;
+
+  max-height: 560px !important;
+
+  margin: 0 !important;
+
+  padding: 38px !important;
+
+  box-sizing: border-box !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  position: relative !important;
+
+  overflow: hidden !important;
+
+  border: 1px solid rgba(130, 150, 255, 0.18) !important;
+
+  border-radius: 28px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 24, 42, 0.98),
+      rgba(8, 13, 25, 0.98)
+    ) !important;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease !important;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.opensource-section .opensource-card:hover {
+  transform: translateY(-5px) !important;
+
+  border-color: rgba(140, 155, 255, 0.35) !important;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.opensource-section .opensource-content {
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  min-width: 0 !important;
+
+  height: 100% !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.opensource-section .opensource-icon {
+  width: 78px !important;
+
+  height: 78px !important;
+
+  min-width: 78px !important;
+
+  min-height: 78px !important;
+
+  flex: 0 0 78px !important;
+
+  margin: 0 0 28px 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
+
+  border-radius: 22px !important;
+
+  border: 1px solid rgba(130, 150, 255, 0.28) !important;
+
+  background: rgba(80, 95, 190, 0.12) !important;
+
+  color: #94a7ff !important;
+
+  font-family: monospace !important;
+
+  font-size: 1.2rem !important;
+
+  font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   STATUS ROW
+   ========================================================= */
+
+.opensource-section .opensource-top {
+  width: 100% !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  justify-content: space-between !important;
+
+  gap: 20px !important;
+
+  margin: 0 0 25px 0 !important;
+
+  box-sizing: border-box !important;
+}
+
+.opensource-section .opensource-status {
+  display: inline-flex !important;
+
+  width: auto !important;
+
+  white-space: nowrap !important;
+
+  color: #9eafff !important;
+
+  font-size: 0.75rem !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: 0.15em !important;
+}
+
+.opensource-section .opensource-type {
+  display: inline-flex !important;
+
+  width: auto !important;
+
+  white-space: nowrap !important;
+
+  color: #7786a4 !important;
+
+  font-size: 0.75rem !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: 0.12em !important;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.opensource-section .opensource-card h3 {
+  width: 100% !important;
+
+  margin: 0 0 18px 0 !important;
+
+  color: #f3f5ff !important;
+
+  font-size: 2rem !important;
+
+  line-height: 1.2 !important;
+
+  font-weight: 800 !important;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.opensource-section .opensource-card p {
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  margin: 0 !important;
+
+  color: #9eafca !important;
+
+  font-size: 1rem !important;
+
+  line-height: 1.8 !important;
+}
+
+
+/* =========================================================
+   TECH STACK
+   ========================================================= */
+
+.opensource-section .opensource-stack {
+  width: 100% !important;
+
+  margin-top: auto !important;
+
+  padding-top: 30px !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  flex-wrap: wrap !important;
+
+  align-items: center !important;
+
+  justify-content: flex-start !important;
+
+  gap: 10px !important;
+
+  box-sizing: border-box !important;
+}
+
+.opensource-section .opensource-stack span {
+  display: inline-flex !important;
+
+  width: auto !important;
+
+  min-width: 0 !important;
+
+  flex: 0 0 auto !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  padding: 8px 13px !important;
+
+  white-space: nowrap !important;
+
+  box-sizing: border-box !important;
+
+  border: 1px solid rgba(130, 150, 255, 0.16) !important;
+
+  border-radius: 10px !important;
+
+  background: rgba(255, 255, 255, 0.035) !important;
+
+  color: #b9c6df !important;
+
+  font-size: 0.78rem !important;
+
+  line-height: 1.2 !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.opensource-section .opensource-actions {
+  width: 100% !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  flex-wrap: wrap !important;
+
+  gap: 12px !important;
+
+  margin-top: 28px !important;
+}
+
+.opensource-section .opensource-button {
+  display: inline-flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  width: auto !important;
+
+  padding: 12px 18px !important;
+
+  border-radius: 12px !important;
+
+  text-decoration: none !important;
+
+  font-size: 0.88rem !important;
+
+  font-weight: 700 !important;
+
+  box-sizing: border-box !important;
+}
+
+.opensource-section .opensource-button.primary {
+  border: 1px solid rgba(140, 155, 255, 0.30) !important;
+
+  background: rgba(100, 115, 255, 0.14) !important;
+
+  color: #c6d0ff !important;
+}
+
+.opensource-section .opensource-button.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+
+  background: rgba(255, 255, 255, 0.035) !important;
+
+  color: #aebbd2 !important;
+}
+
+
+/* =========================================================
+   ENGINEERING PRINCIPLES
+   ========================================================= */
+
+.opensource-section .opensource-principles {
+  width: 100% !important;
+
+  margin-top: auto !important;
+
+  padding-top: 30px !important;
+
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr)) !important;
+
+  gap: 12px !important;
+
+  box-sizing: border-box !important;
+}
+
+.opensource-section .opensource-principles > div {
+  width: 100% !important;
+
+  min-width: 0 !important;
+
+  min-height: 65px !important;
+
+  padding: 14px 16px !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  gap: 13px !important;
+
+  box-sizing: border-box !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+
+  border-radius: 14px !important;
+
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+
+.opensource-section .opensource-principles strong {
+  display: inline-flex !important;
+
+  flex: 0 0 auto !important;
+
+  color: #8fa2ff !important;
+
+  font-family: monospace !important;
+
+  font-size: 0.78rem !important;
+}
+
+.opensource-section .opensource-principles span {
+  display: block !important;
+
+  min-width: 0 !important;
+
+  color: #aab8cf !important;
+
+  font-size: 0.86rem !important;
+
+  line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .opensource-section .section-container {
+    padding-left: 28px !important;
+
+    padding-right: 28px !important;
+  }
+
+  .opensource-section .opensource-card {
+    flex-basis: 560px !important;
+
+    height: 560px !important;
+
+    min-height: 560px !important;
+
+    max-height: 560px !important;
+
+    padding: 30px !important;
+  }
+
+  .opensource-section .opensource-principles {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .opensource-section {
+    min-height: auto !important;
+
+    padding: 80px 0 90px !important;
+  }
+
+  .opensource-section .section-container {
+    padding-left: 18px !important;
+
+    padding-right: 18px !important;
+  }
+
+  .opensource-section .section-heading {
+    margin-bottom: 40px !important;
+  }
+
+  .opensource-section .section-heading h2 {
+    font-size: 2.2rem !important;
+  }
+
+  /* STILL ONE BELOW ANOTHER */
+
+  .opensource-section .opensource-grid {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    width: 100% !important;
+  }
+
+  .opensource-section .opensource-card {
+    width: 100% !important;
+
+    min-width: 100% !important;
+
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    min-height: 520px !important;
+
+    max-height: none !important;
+
+    flex: none !important;
+
+    padding: 25px !important;
+  }
+
+  .opensource-section .opensource-top {
+    gap: 10px !important;
+  }
+
+  .opensource-section .opensource-status,
+  .opensource-section .opensource-type {
+    font-size: 0.64rem !important;
+  }
+
+  .opensource-section .opensource-card h3 {
+    font-size: 1.55rem !important;
+  }
+
+  .opensource-section .opensource-card p {
+    font-size: 0.92rem !important;
+  }
+
+  .opensource-section .opensource-actions {
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+  }
+
+  .opensource-section .opensource-button {
+    width: 100% !important;
+  }
+
+  .opensource-section .opensource-principles {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .opensource-section .section-container {
+    padding-left: 14px !important;
+
+    padding-right: 14px !important;
+  }
+
+  .opensource-section .opensource-card {
+    padding: 21px !important;
+
+    min-height: 500px !important;
+  }
+
+  .opensource-section .opensource-stack {
+    gap: 7px !important;
+  }
+
+  .opensource-section .opensource-stack span {
+    padding: 7px 10px !important;
+
+    font-size: 0.70rem !important;
+  }
+}
