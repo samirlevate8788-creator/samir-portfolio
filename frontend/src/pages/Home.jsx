@@ -1,243 +1,142 @@
-import { ArrowUpRight, Terminal } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+  Code2,
+  Mail,
+  ShieldCheck,
+  Terminal,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import SocialIcon from "../components/SocialIcon";
 
-const tags = [
-  "Software Engineering",
-  "Cybersecurity",
-  "AI & Technology",
-  "Open Source",
-];
+const focusAreas = ["Full-stack", "Defensive security", "AI & systems", "Open source"];
 
 export default function Home() {
   return (
-    <main>
-      {/* =========================
-          HERO
-      ========================== */}
-      <section className="hero" id="home">
-        <div className="hero-content">
-
-          {/* STATUS */}
+    <main className="home-page">
+      <div className="home-shell">
+        <section className="home-hero" aria-labelledby="home-title">
           <motion.div
-            className="status"
-            initial={{ opacity: 0, y: 15 }}
+            className="home-copy"
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.55, ease: "easeOut" }}
           >
-            <span />
-            Building & Exploring Technology
+            <div className="home-presence">
+              <span className="presence-dot" />
+              <span>AVAILABLE FOR INTERNSHIPS</span>
+              <span className="presence-divider">//</span>
+              <span>BUILDING ASTRAOS</span>
+            </div>
+
+            <p className="home-command"><span>$</span> whoami</p>
+            <h1 id="home-title">
+              Samir
+              <span>Levate<span className="title-cursor">_</span></span>
+            </h1>
+            <p className="home-role">SOFTWARE DEVELOPER <i>·</i> SECURITY-MINDED BUILDER</p>
+            <p className="home-summary">
+              B.Tech CSE student turning what I learn into useful software—from
+              full-stack products and defensive security tools to Linux systems
+              and open-source projects.
+            </p>
+
+            <div className="home-actions">
+              <Link to="/projects" className="cyber-button cyber-button-primary">
+                Explore projects <ArrowUpRight size={17} />
+              </Link>
+              <Link to="/about" className="cyber-button cyber-button-quiet">
+                About me <ArrowDownRight size={17} />
+              </Link>
+            </div>
+
+            <div className="home-socials" aria-label="Social profiles">
+              <a href="https://github.com/samirlevate8788-creator" target="_blank" rel="noreferrer">
+                <SocialIcon name="github" size={16} /> <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/samir-levate/" target="_blank" rel="noreferrer">
+                <SocialIcon name="linkedin" size={16} /> <span>LinkedIn</span>
+              </a>
+              <a href="mailto:sameerlewate8788@gmail.com">
+                <Mail size={16} /> <span>Email</span>
+              </a>
+            </div>
+
+            <div className="home-focus-row" aria-label="Areas of focus">
+              {focusAreas.map((area) => <span key={area}>{area}</span>)}
+            </div>
           </motion.div>
 
-          {/* EYEBROW */}
-          <motion.p
-            className="eyebrow"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.15 }}
-          >
-            SOFTWARE ENGINEERING • CYBERSECURITY • AI
-          </motion.p>
-
-          {/* TITLE */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
-            Hi, I'm
-            <span>Samir Levate.</span>
-          </motion.h1>
-
-          {/* SUBTITLE */}
-          <motion.h2
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            I build software,
-            <br />
-            explore security & technology.
-          </motion.h2>
-
-          {/* DESCRIPTION */}
-          <motion.p
-            className="hero-description"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            A Computer Science & Engineering student focused on software
-            development, cybersecurity, artificial intelligence, systems and
-            open-source technology.
-          </motion.p>
-
-          {/* ACTIONS */}
           <motion.div
-            className="hero-actions"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            className="home-visual"
+            initial={{ opacity: 0, scale: 0.97, x: 14 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.12, ease: "easeOut" }}
           >
+            <div className="visual-index"><span>FIG. 01</span><span>PROFILE // 2026</span></div>
 
-            {/* PROJECTS */}
-            <a href="#projects" className="primary-btn">
-              Explore My Work
-              <ArrowUpRight size={17} />
-            </a>
+            <div className="portrait-window">
+              <div className="portrait-window-bar">
+                <div className="window-lights"><i /><i /><i /></div>
+                <span>samir-levate/profile.png</span>
+                <span className="window-lock"><ShieldCheck size={14} /> PUBLIC</span>
+              </div>
+              <div className="portrait-image-wrap">
+                <img
+                  className="portrait-image"
+                  src="/images/samir-linkedin-portrait.png"
+                  alt="Samir Levate at a developer workspace"
+                  fetchPriority="high"
+                />
+                <div className="portrait-image-shade" />
+                <div className="portrait-corner portrait-corner-tl" />
+                <div className="portrait-corner portrait-corner-br" />
+                <div className="portrait-label">
+                  <span className="presence-dot" /> PROFILE ACTIVE
+                </div>
+                <div className="portrait-nameplate">
+                  <span>BUILD // LEARN // REPEAT</span>
+                  <strong>SAMIR LEVATE</strong>
+                </div>
+              </div>
+            </div>
 
-            {/* GITHUB */}
-            <a
-              href="https://github.com/samirlevate8788-creator"
-              target="_blank"
-              rel="noreferrer"
-              className="secondary-btn"
-            >
-              <span className="social-icon github-icon">
-                GH
-              </span>
-              GitHub
-            </a>
-
-            {/* LINKEDIN */}
-            <a
-              href="https://www.linkedin.com/in/samir-levate-a2647a357"
-              target="_blank"
-              rel="noreferrer"
-              className="secondary-btn"
-            >
-              <span className="social-icon linkedin-icon">
-                in
-              </span>
-              LinkedIn
-            </a>
-
-          </motion.div>
-
-          {/* TAGS */}
-          <motion.div
-            className="hero-tags"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.65, duration: 0.6 }}
-          >
-            {tags.map((tag) => (
-              <span key={tag}>{tag}</span>
-            ))}
-          </motion.div>
-
-        </div>
-
-        {/* =========================
-            TERMINAL VISUAL
-        ========================== */}
-        <motion.div
-          className="hero-visual"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-
-          {/* GRID */}
-          <div className="grid" />
-
-          {/* TERMINAL */}
-          <div className="terminal">
-
-            {/* TERMINAL TOP */}
-            <div className="terminal-top">
-
-              <div className="terminal-dots">
-                <i />
-                <i />
-                <i />
+            <div className="visual-bottom-row">
+              <div className="terminal-window" aria-label="Developer terminal illustration">
+                <div className="terminal-window-top">
+                  <span><Terminal size={13} /> session.sh</span>
+                  <span className="terminal-live"><i /> LIVE</span>
+                </div>
+                <div className="terminal-window-body">
+                  <p><b>$</b> focus --now</p>
+                  <p className="terminal-output"><Code2 size={13} /> software · security · systems</p>
+                  <p><b>$</b> status <span className="terminal-ready">building<span className="blink-cursor">_</span></span></p>
+                </div>
               </div>
 
-              <span>
-                <Terminal size={13} />
-                samir@portfolio
-              </span>
-
+              <Link className="reel-window" to="/projects" aria-label="See the project showcase">
+                <img src="/images/project-reel.gif" alt="Animated AegisOne project dashboard preview" />
+                <span className="reel-caption">PROJECT REEL <ArrowUpRight size={13} /></span>
+              </Link>
             </div>
 
-            {/* TERMINAL BODY */}
-            <div className="terminal-body">
+            <img
+              className="github-portrait-stamp"
+              src="/images/samir-github-profile.jpg"
+              alt="Samir Levate's GitHub profile portrait"
+              loading="lazy"
+            />
+            <div className="visual-coordinate">AMRAVATI, INDIA</div>
+          </motion.div>
+        </section>
 
-              <p>
-                <b>$</b> whoami
-              </p>
-
-              <p className="green">
-                samir-levate
-              </p>
-
-              <p>
-                <b>$</b> role
-              </p>
-
-              <p className="blue">
-                software_engineer
-                <br />
-                security_enthusiast
-                <br />
-                technology_builder
-              </p>
-
-              <p>
-                <b>$</b> interests
-              </p>
-
-              <p className="purple">
-                AI / Linux / Open Source / Security
-              </p>
-
-              <p>
-                <b>$</b> status
-              </p>
-
-              <p className="green">
-                building...
-              </p>
-
-              <p className="cursor-line">
-                <b>$</b> _
-              </p>
-
-            </div>
-          </div>
-
-          {/* ORBITS */}
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-
-        </motion.div>
-      </section>
-
-      {/* =========================
-          IDENTITY STRIP
-      ========================== */}
-      <section className="identity-strip">
-
-        <div>
-          <strong>SOFTWARE</strong>
-          <span>Engineering</span>
+        <div className="home-bottomline">
+          <span>01 / 12 PAGES</span>
+          <span>MULTI-PAGE PORTFOLIO <i>·</i> USE THE NAV TO EXPLORE</span>
+          <span>INDIA <i>·</i> BUILDING IN PUBLIC</span>
         </div>
-
-        <div>
-          <strong>SECURITY</strong>
-          <span>Cybersecurity</span>
-        </div>
-
-        <div>
-          <strong>AI</strong>
-          <span>Artificial Intelligence</span>
-        </div>
-
-        <div>
-          <strong>OSS</strong>
-          <span>Open Source</span>
-        </div>
-
-      </section>
+      </div>
     </main>
   );
 }
